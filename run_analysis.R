@@ -49,3 +49,6 @@ grouped <- group_by(meansAndSDs, Subject, Activity)
 
 # Summarize each column
 summary <- summarise_each(grouped, funs(mean))
+
+# Write output
+write.table(summary, file = "tidy-result.txt", row.names = FALSE)
