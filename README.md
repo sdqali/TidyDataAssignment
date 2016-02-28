@@ -7,4 +7,6 @@ An R script to tidy and analyze data from the [Human Activity Recognition Using 
 2. Exptract the zip file and copy the files in to this directory.
 
 ### Running analysis
-Execute the script by running `source("run_analysis.R")` from R.
+* Execute the script by running `source("run_analysis.R")` from R.
+* The result of the analysis will be written to a file named `tidy-result.txt`.
+* The variables in the tidy data are described in `CodeBook.md`.
