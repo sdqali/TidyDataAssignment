@@ -44,3 +44,8 @@ dataTable <- mutate(dataTable, Activity = activityLabels[Activity])
 validNames <- c(1, 2, grep(pattern = "mean|std", names(dataTable)))
 meansAndSDs <- select(dataTable, validNames)
 
+# Group by Subject and Activity
+grouped <- group_by(meansAndSDs, Subject, Activity)
+
+# Summarize each column
+summary <- summarise_each(grouped, funs(mean))
