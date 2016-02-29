@@ -35,7 +35,7 @@ combinedData <- rbind(trainData, testData)
 dataTable <- tbl_df(combinedData)
 
 # Clean up column names
-names(dataTable) <- make.names(names(dataTable), unique = TRUE)
+names(dataTable) <- make.names(gsub("\\(|\\)", "", names(dataTable)), unique = TRUE)
 
 # Label activities correctly
 dataTable <- mutate(dataTable, Activity = activityLabels[Activity])
